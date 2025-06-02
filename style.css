@@ -243,6 +243,7 @@ h2 span {
     border-radius: 10px;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
 }
 
 .service-card:hover {
@@ -265,6 +266,121 @@ h2 span {
 
 .service-card p {
     color: var(--gray);
+    margin-bottom: 1.5rem;
+}
+
+.details-btn {
+    background: rgba(108, 99, 255, 0.2);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.details-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: var(--dark);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--gray);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: var(--primary);
+}
+
+.modal h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.modal ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.modal ul li {
+    margin-bottom: 0.8rem;
+    color: var(--light);
+}
+
+.modal form input,
+.modal form textarea,
+.modal form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    font-family: inherit;
+}
+
+.modal form input:focus,
+.modal form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.modal form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #5a52e0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
 }
 
 /* Кейсы */
@@ -552,5 +668,9 @@ footer {
         height: 40px;
         bottom: 1rem;
         right: 1rem;
+    }
+    
+    .modal-content {
+        padding: 1.5rem;
     }
 }
