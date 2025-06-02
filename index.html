@@ -11,59 +11,14 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
     <!-- Стили -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Основные стили (адаптируйте под ваш дизайн) */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        .section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .service-card, .case-card {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 500px;
-        }
-        .close-btn {
-            float: right;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <!-- Шапка -->
     <header>
         <nav>
-            <a href="Ebgl.html" class="lang-switcher" title="English version">ENG</a>
+            <a href="en.html" class="lang-switcher" title="English version">ENG</a>
             <a href="#home" class="logo">SNS Promo</a>
             <ul class="nav-links">
                 <li><a href="#about">Обо мне</a></li>
@@ -78,7 +33,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Продвижение западных артистов в СНГ</h1>
-            <p>SMM-стратег и таргетолог с 3+ годами опыта в музыкальной индустрии</p>
+            <p>Выход на рынок России, Украины, Казахстана и других стран СНГ</p>
             <a href="#contact" class="cta-button">Обсудить проект</a>
         </div>
     </section>
@@ -88,22 +43,11 @@
         <h2><span>//</span> Кто я</h2>
         <div class="about-grid">
             <div class="about-text">
-                <p><strong>SMM-стратег и таргетолог</strong> с 3+ годами опыта в продвижении брендов, музыкальных проектов и пабликов.</p>
-                <p><strong>Специализация:</strong></p>
+                <p>Я помогаю западным музыкантам, лейблам и продюсерам заходить на рынок СНГ через:</p>
                 <ul class="features-list">
-                    <li>🌑 Таргетированная реклама (3 года, CPA-оптимизация)</li>
-                    <li>🌒 Работа с блогерами (от 100K до 8M подписчиков)</li>
-                    <li>🌓 Выставки и международные продажи (Германия, Россия)</li>
-                    <li>🌔 Продвижение в соцсетях (Reels, рекомендации, музыкальная индустрия)</li>
-                </ul>
-                <p><strong>Опыт:</strong></p>
-                <ul>
-                    <li>📌 <strong>ART-менеджер / Таргетолог</strong> — «Ватафак» (900K подписчиков), 2023:<br>
-                        * +40% охватов через Reels и сторис.<br>
-                        * CPP < 30 руб. для артистов.<br>
-                        * Выход на западный рынок.</li>
-                    <li>📌 <strong>Менеджер по продвижению</strong> — «Саврос» (2021–2024):<br>
-                        * Организация выставок в России и Германии.</li>
+                    <li>Локализованный контент (переводы, адаптацию)</li>
+                    <li>Виральные кампании в TikTok, VK, Telegram</li>
+                    <li>Организацию концертов и коллабов</li>
                 </ul>
             </div>
             <div class="about-image">
@@ -116,77 +60,76 @@
     <section id="services" class="services section">
         <h2><span>//</span> Услуги</h2>
         <div class="services-grid">
-            <div class="service-card" onclick="openModal('smm-modal')">
+            <div class="service-card">
                 <i class="fas fa-chart-line icon"></i>
                 <h3>SMM-продвижение</h3>
                 <p>Взрывной рост в соцсетях СНГ (TikTok, VK, YouTube Shorts).</p>
-                <button class="details-btn">Подробнее</button>
+                <a href="smm.html" class="service-button">Подробнее</a>
             </div>
-            <div class="service-card" onclick="openModal('concert-modal')">
+            <div class="service-card">
                 <i class="fas fa-microphone icon"></i>
                 <h3>Концерты</h3>
                 <p>Организация туров и выступлений в Москве, Киеве, Алматы.</p>
-                <button class="details-btn">Оставить заявку</button>
+                <a href="concerts.html" class="service-button">Подробнее</a>
             </div>
             <div class="service-card">
                 <i class="fas fa-handshake icon"></i>
                 <h3>Коллабы</h3>
                 <p>Связи с топовыми артистами СНГ для совместных треков.</p>
+                <a href="#contact" class="service-button">Обсудить</a>
             </div>
         </div>
     </section>
 
-    <!-- Модальное окно для SMM -->
-    <div id="smm-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('smm-modal')">&times;</span>
-            <h3>SMM-продвижение для артистов</h3>
-            <p><strong>Что входит:</strong></p>
-            <ul>
-                <li>Анализ ЦА и конкурентов</li>
-                <li>Стратегия контента (Reels, клипы, сторис)</li>
-                <li>Таргетированная реклама (CPP < 30 руб.)</li>
-                <li>Продвижение через блогеров (100K–8M подписчиков)</li>
-                <li>Еженедельные отчеты</li>
-            </ul>
-            <p><strong>Примеры результатов:</strong></p>
-            <ul>
-                <li>+200% подписчиков в VK за 3 месяца</li>
-                <li>500K+ просмотров на TikTok за кампанию</li>
-            </ul>
-            <a href="#contact" class="cta-button">Обсудить проект</a>
+    <!-- Кейсы -->
+    <section id="cases" class="cases section">
+        <h2><span>//</span> Кейсы</h2>
+        <div class="cases-grid">
+            <div class="case-card">
+                <img src="images/case1.jpg" alt="Кейс: продвижение артиста A" loading="lazy">
+                <h3>Артист A</h3>
+                <p>Рост подписчиков в VK на 200% за 3 месяца.</p>
+            </div>
+            <div class="case-card">
+                <img src="images/case2.jpg" alt="Кейс: организация концерта" loading="lazy">
+                <h3>Артист B</h3>
+                <p>Организация концерта в Москве (500+ зрителей).</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Модальное окно для концертов -->
-    <div id="concert-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('concert-modal')">&times;</span>
-            <h3>Заявка на организацию концерта</h3>
-            <form action="https://formsubmit.co/your@email.com" method="POST">
-                <input type="hidden" name="_subject" value="Новая заявка на концерт">
-                <input type="text" name="Артист/группа" placeholder="Артист/группа" required>
-                <input type="text" name="Жанр" placeholder="Жанр музыки" required>
-                <input type="text" name="Города" placeholder="Желаемые города (через запятую)" required>
-                <input type="date" name="Дата" placeholder="Примерные даты">
-                <input type="number" name="Бюджет" placeholder="Бюджет (USD)" min="1000">
-                <textarea name="Дополнительно" placeholder="Дополнительная информация"></textarea>
-                <button type="submit" class="submit-btn">Отправить заявку</button>
+    <!-- Контакты -->
+    <section id="contact" class="contact section">
+        <h2><span>//</span> Контакты</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><i class="fas fa-paper-plane contact-icon"></i> Telegram: <a href="https://t.me/yournick" class="contact-link">@yournick</a></p>
+                <p><i class="fas fa-envelope contact-icon"></i> Email: <a href="mailto:youremail@gmail.com" class="contact-link">youremail@gmail.com</a></p>
+            </div>
+            <form class="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Сообщение" required></textarea>
+                <button type="submit" class="submit-btn">Отправить</button>
             </form>
         </div>
-    </div>
+    </section>
 
-    <!-- Остальные секции (Кейсы, Контакты) остаются без изменений -->
+    <!-- Кнопка "Наверх" -->
+    <button id="back-to-top" class="back-to-top" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
+    <!-- Футер -->
+    <footer class="footer">
+        <p>© <span id="year"></span> SNS Promo. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
     <script>
-        // Функции для модальных окон
-        function openModal(id) {
-            document.getElementById(id).style.display = 'flex';
-        }
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-        
-        // Закрытие при клике вне окна
-        window.onclick = function(event) {
-            if (event.target.className === '
+        // Автоматическое обновление года в футере
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
